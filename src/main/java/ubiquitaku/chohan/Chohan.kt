@@ -139,13 +139,14 @@ class Chohan : JavaPlugin() {
                 Bukkit.broadcastMessage(server.getPlayer(cho[i].toString()).toString())
                 //cに金を配布
             }
-            return true
         }
         Bukkit.broadcastMessage(pln + "半の勝利")
         for (i in han.indices) {
             Bukkit.broadcastMessage(server.getPlayer(cho[i].toString()).toString())
             //hに金を配布
         }
+        cho.removeAll(cho)
+        han.removeAll(han)
         return true
     }
 }
